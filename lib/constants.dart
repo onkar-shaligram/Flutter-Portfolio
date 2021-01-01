@@ -8,3 +8,5 @@ String githubImgUrl = "https://www.flaticon.com/svg/static/icons/svg/2111/211142
 String twitterImgUrl = "https://www.flaticon.com/svg/static/icons/svg/733/733579.svg";
 
 String linkedinImgUrl = "https://www.flaticon.com/svg/static/icons/svg/174/174857.svg";
+
+String uploadTime =  DateTime.now().day.toString() + DateTime.now().month.toString() + DateTime.now().year.toString() + DateTime.now().hour.toString() + DateTime.now().minute.toString() + DateTime.now().second.toString() + DateTime.now().millisecond.toString();

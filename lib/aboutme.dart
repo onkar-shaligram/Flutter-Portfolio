@@ -32,15 +32,16 @@ class AboutMe extends StatelessWidget {
       body: SingleChildScrollView(
         physics: ClampingScrollPhysics(),
               child: Container(
-        decoration: BoxDecoration(
-          color: Colors.black,
-          image: DecorationImage(
-            colorFilter: new ColorFilter.mode(
-                Colors.black.withOpacity(0.4), BlendMode.darken),
-            image: NetworkImage(bgImgUrl),
-            fit: BoxFit.cover,
-          ),
-        ),
+        // decoration: BoxDecoration(
+        //   color: Colors.black,
+        //   image: DecorationImage(
+        //     colorFilter: new ColorFilter.mode(
+        //         Colors.black.withOpacity(0.4), BlendMode.darken),
+        //     image: NetworkImage(bgImgUrl),
+        //     fit: BoxFit.cover,
+        //   ),
+        // ),
+        color: Color(0xff333340),
           //width: MediaQuery.of(context).size.width,
           //height: MediaQuery.of(context).size.height,
           child: Column(
