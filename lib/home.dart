@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/aboutme.dart';
 import 'package:flutter_portfolio/constants.dart';
+import 'package:flutter_portfolio/contact_me.dart';
+import 'package:flutter_portfolio/projects.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:html' as html;
 
@@ -34,7 +37,8 @@ class _HomeState extends State<Home> {
               children: [
                 InkWell(
                     onTap: () {
-                      //TODO
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => AboutMe()));
                     },
                     child: Text(
                       "About",
@@ -48,7 +52,8 @@ class _HomeState extends State<Home> {
                 ),
                 InkWell(
                     onTap: () {
-                      //TODO
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Projects()));
                     },
                     child: Text(
                       "Projects",
@@ -62,7 +67,8 @@ class _HomeState extends State<Home> {
                 ),
                 InkWell(
                     onTap: () {
-                      //TODO
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => ContactMe()));
                     },
                     child: Text(
                       "Contact Me",
@@ -81,7 +87,8 @@ class _HomeState extends State<Home> {
         decoration: BoxDecoration(
           color: Colors.black,
           image: DecorationImage(
-            colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.darken),
+            colorFilter: new ColorFilter.mode(
+                Colors.black.withOpacity(0.4), BlendMode.darken),
             image: NetworkImage(bgImgUrl),
             fit: BoxFit.cover,
           ),
@@ -98,10 +105,21 @@ class _HomeState extends State<Home> {
               ),
               Text(
                 "Onkar Shaligram",
-                style: TextStyle(fontSize: 50, fontWeight: FontWeight.w700, color: Colors.white),
+                style: TextStyle(
+                    fontSize: 50,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white),
               ),
-              SizedBox(height: 20,),
-              Text("Android Developer | Flutter Enthusiast", style: TextStyle(color: Colors.white70, fontSize: 20, fontWeight: FontWeight.w600),),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                "Android Developer | Flutter Enthusiast",
+                style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600),
+              ),
               SizedBox(
                 height: 30,
               ),
@@ -114,9 +132,13 @@ class _HomeState extends State<Home> {
                         width: 25,
                         height: 25,
                         child: Image.network(githubImgUrl)),
-                    label: Text('Github', style: TextStyle(color: Colors.white),),
+                    label: Text(
+                      'Github',
+                      style: TextStyle(color: Colors.white),
+                    ),
                     onPressed: () {
-                      html.window.open("https://github.com/onkar-shaligram", "name");
+                      html.window
+                          .open("https://github.com/onkar-shaligram", "name");
                     },
                   ),
                   FlatButton.icon(
@@ -124,10 +146,13 @@ class _HomeState extends State<Home> {
                         width: 25,
                         height: 25,
                         child: Image.network(twitterImgUrl)),
-                    label: Text('Twitter', style: TextStyle(color: Colors.white),),
+                    label: Text(
+                      'Twitter',
+                      style: TextStyle(color: Colors.white),
+                    ),
                     onPressed: () {
-                      html.window.open(
-                          "https://twitter.com/shaligram_onkar", "name");
+                      html.window
+                          .open("https://twitter.com/shaligram_onkar", "name");
                     },
                   ),
                   FlatButton.icon(
@@ -135,7 +160,10 @@ class _HomeState extends State<Home> {
                         width: 25,
                         height: 25,
                         child: Image.network(linkedinImgUrl)),
-                    label: Text('LinkedIn', style: TextStyle(color: Colors.white),),
+                    label: Text(
+                      'LinkedIn',
+                      style: TextStyle(color: Colors.white),
+                    ),
                     onPressed: () {
                       html.window.open(
                           "https://www.linkedin.com/in/onkar-shaligram-a9799b190/",
@@ -144,6 +172,27 @@ class _HomeState extends State<Home> {
                   )
                 ],
               ),
+              SizedBox(
+                height: 60,
+              ),
+              RichText(
+                text: TextSpan(
+                  style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600),
+                  children: [
+                    TextSpan(text: 'Made with '),
+                    WidgetSpan(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                        child: Icon(Icons.favorite_rounded, color: Colors.red,)
+                      ),
+                    ),
+                    TextSpan(text: ' Using Flutter'),
+                  ],
+                ),
+              )
             ],
           ),
         ),
