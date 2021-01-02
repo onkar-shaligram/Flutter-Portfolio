@@ -19,14 +19,19 @@ class Projects extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
 
-      body: GridView.count(
-          padding: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 32.0),
-          crossAxisCount: 3,
-          childAspectRatio: MediaQuery.of(context).size.width /
-              (MediaQuery.of(context).size.height / 1.3),
-          children: List.generate(
-              projects.length, (index) => ProjectView(project: projects[index],)),
+      body: Container(
+        decoration: BoxDecoration(
+          color: Color(0xff333340),
         ),
+        child: GridView.count(
+            padding: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 32.0),
+            crossAxisCount: 3,
+            childAspectRatio: MediaQuery.of(context).size.width /
+                (MediaQuery.of(context).size.height / 1.5),
+            children: List.generate(
+                projects.length, (index) => ProjectView(project: projects[index],)),
+          ),
+      ),
     );
   }
 }

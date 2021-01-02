@@ -22,6 +22,7 @@ class ProjectView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 10,
       margin: EdgeInsets.all(18.0),
       child: InkWell(
         onTap: () {
@@ -35,10 +36,14 @@ class ProjectView extends StatelessWidget {
             children: [
               Expanded(
                   flex: 40,
-                  child: Image.network(
-                    project.image,
-                    width: 25,
-                    height: 25,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Center(
+                      child: Image.network(
+                        project.image,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   )),
               Expanded(
                 flex: 3,
@@ -56,11 +61,11 @@ class ProjectView extends StatelessWidget {
                         style: Theme.of(context).textTheme.headline6,
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 15,
                       ),
                       Text(
                         project.description,
-                        textScaleFactor: 1.2,
+                        textScaleFactor: 1.25,
                         style: Theme.of(context).textTheme.caption,
                       ),
                     ],
