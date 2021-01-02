@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/aboutme.dart';
-import 'package:flutter_portfolio/constants.dart';
-import 'package:flutter_portfolio/contact_me.dart';
-import 'package:flutter_portfolio/projects.dart';
+import 'package:flutter_portfolio/Helpers/constants.dart';
+import 'package:flutter_portfolio/Views/aboutme.dart';
+import 'package:flutter_portfolio/Views/contact_me.dart';
+import 'package:flutter_portfolio/Views/projects.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:html' as html;
 
