@@ -21,6 +21,7 @@ class ProjectView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
     return Card(
       elevation: 10,
       margin: EdgeInsets.all(18.0),
@@ -61,7 +62,7 @@ class ProjectView extends StatelessWidget {
                         style: Theme.of(context).textTheme.headline6,
                       ),
                       SizedBox(
-                        height: 15,
+                        height: height * .01,
                       ),
                       Text(
                         project.description,
