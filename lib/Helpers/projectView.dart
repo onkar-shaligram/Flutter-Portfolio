@@ -50,7 +50,7 @@ class ProjectView extends StatelessWidget {
                 child: Container(),
               ),
               Expanded(
-                flex: 60,
+                flex: 70,
                 child: Container(
                   padding: EdgeInsets.only(top: 10.0),
                   child: Wrap(
